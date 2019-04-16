@@ -1,12 +1,3 @@
-// Created by Tomas de Camino Beck
-/*
- * Este es un brazo con dos servos que lee información XY
- * desde el puerto serial y lo traslada a movimientos en un
- * plano XY a través de la rotación de ángulos de los servos
- * 
- * www.inventoria.org
- */
-
 #include <math.h>
 #include <Servo.h>
 
@@ -59,8 +50,6 @@ void moveServo(float a1, float a2) {
   delay(500);
 }
 
-//ley de cosenos calcula angulo A donde a es
-// el cateto opuesto
 float getAngle(float a, float b, float c) {
   return acos((square(b) + square(c) - square(a)) / (2 * b * c));
 }
